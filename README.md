@@ -10,15 +10,15 @@ Installation
 To bring this into a PyPE project you will need to add a new svn:externals property.
 
 If you are using Tortoise:
-Right click on the main project folder.
-TortoiseSVN > Properties
-New... > Externals
-New...
-Local path: extra/ted
-URL: https://github.com/UT-Austin-FIS/ted_wrapper/tags/v1.0/ted
-OK
+* Right click on the main project folder.
+* TortoiseSVN > Properties
+* New... > Externals
+* New...
+* Local path: extra/ted
+* URL: https://github.com/UT-Austin-FIS/ted_wrapper/tags/v1.0/ted
+* OK
 
-Exit out of Tortoise, and you're done.
+* Exit out of Tortoise, and you're done.
 
 
 Backwards Compatibility
