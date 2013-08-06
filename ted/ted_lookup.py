@@ -1,6 +1,6 @@
-from ted_connection import get_ted_connection
+from ted import TEDConnection
 
-TED_CONNECTION = get_ted_connection
+TED_CONNECTION = TEDConnection
 
 def by_eid(eid, addl_attrs=None, ted_eid=None, ted_pass=None, ted_host=None):
     """
@@ -8,7 +8,11 @@ def by_eid(eid, addl_attrs=None, ted_eid=None, ted_pass=None, ted_host=None):
     a user that is not already a part of the attributes list defined in
     TEDConnection
     """
-    connection = TED_CONNECTION(ted_eid, ted_pass, ted_host)
+    connection = TED_CONNECTION(
+        eid=ted_eid,
+        password=ted_pass,
+        hostname=ted_host,
+    )
     ted_data = connection.get_by_eid(eid, attrs=addl_attrs)
     return alias_data(ted_data)
 
@@ -18,7 +22,11 @@ def by_uin(uin, addl_attrs=None, ted_eid=None, ted_pass=None, ted_host=None):
     a user that is not already a part of the attributes list defined in
     TEDConnection
     """
-    connection = TED_CONNECTION(ted_eid, ted_pass, ted_host)
+    connection = TED_CONNECTION(
+        eid=ted_eid,
+        password=ted_pass,
+        hostname=ted_host,
+    )
     ted_data = connection.get_by_uin(uin, attrs=addl_attrs)
     return alias_data(ted_data)
 
