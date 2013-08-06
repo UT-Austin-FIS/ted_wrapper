@@ -11,6 +11,9 @@ class ConnectionTests(TestCase):
     # TODO: expand these tests
 
     def test_get_connection_with_invalid_creds(self):
+        """
+        This test makes an actual ted call, as a minimal integration/API test.
+        """
         self.assertRaises(
             INVALID_CREDENTIALS,
             ted_connection.get_ted_connection,
@@ -21,8 +24,16 @@ class ConnectionTests(TestCase):
 
 
 class LookupTests(TestCase):
+    """
+    These tests are primarily centered around the expected behavior of a call
+    to the lookup methods, so in most of them we're mocking out the actual ted
+    connection, and returning the fixture data.
+    """
 
     def test_lookup_with_invalid_creds(self):
+        """
+        This test makes an actual ted call, as a minimal integration/API test.
+        """
         self.assertRaises(
             INVALID_CREDENTIALS,
             ted_lookup.by_eid,
@@ -103,6 +114,9 @@ class TedConnectionTests(TestCase):
     # TODO: expand these tests
 
     def test_anonymous_connection(self):
+        """
+        This test makes an actual ted call, as a minimal integration/API test.
+        """
         test_connection = ted.TEDConnection(
             service=False,
             hostname=HOSTNAME,
