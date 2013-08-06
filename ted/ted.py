@@ -7,7 +7,6 @@ the original work.
 """
 
 from getpass import getpass
-import ldap
 from ldap.filter import filter_format
 from simpleldap import Connection, LDAPItem
 
