@@ -1,26 +1,10 @@
 from unittest import TestCase
 from mock import patch
-from ted import ted_connection, ted_lookup, ted
+from ted import ted_lookup, ted
 from ldap import INVALID_CREDENTIALS
 from ted_data import ted_data
 
 HOSTNAME = "entdir.utexas.edu"
-
-
-class ConnectionTests(TestCase):
-    # TODO: expand these tests
-
-    def test_get_connection_with_invalid_creds(self):
-        """
-        This test makes an actual ted call, as a minimal integration/API test.
-        """
-        self.assertRaises(
-            INVALID_CREDENTIALS,
-            ted_connection.get_ted_connection,
-            eid='foo',
-            password='bar',
-            hostname=HOSTNAME,
-            )
 
 
 class LookupTests(TestCase):
@@ -31,9 +15,7 @@ class LookupTests(TestCase):
     """
 
     def test_lookup_with_invalid_creds(self):
-        """
-        This test makes an actual ted call, as a minimal integration/API test.
-        """
+        # This test makes an actual ted call, as a minimal integration/API test.
         self.assertRaises(
             INVALID_CREDENTIALS,
             ted_lookup.by_eid,
@@ -114,9 +96,7 @@ class TedConnectionTests(TestCase):
     # TODO: expand these tests
 
     def test_anonymous_connection(self):
-        """
-        This test makes an actual ted call, as a minimal integration/API test.
-        """
+        # This test makes an actual ted call, as a minimal integration/API test.
         test_connection = ted.TEDConnection(
             service=False,
             hostname=HOSTNAME,
