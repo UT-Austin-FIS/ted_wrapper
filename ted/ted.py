@@ -109,6 +109,16 @@ class TEDLDAPItem(LDAPItem):
         """
         return self.has_entitlement("DEV")
 
+    def is_restricted(self):
+        """
+        Return True if the person's data is restricted
+        """
+        restrictions = [
+            self.get('utexasEduPersonAttrRestrict', None),
+            self.get('utexasEduPersonRecordRestrict', None)
+            ]
+        return restrictions != [None,None]
+
 
 class TEDConnection(Connection):
     """
@@ -134,6 +144,8 @@ class TEDConnection(Connection):
         'utexasEduPersonMajorDept',
         'mail',
         'utexasEduPersonEntitlementCode',
+        'utexasEduPersonAttrRestrict',
+        'utexasEduPersonRecordRestrict',
     ]
 
     result_item_class = TEDLDAPItem
