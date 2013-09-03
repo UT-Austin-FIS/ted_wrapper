@@ -15,7 +15,7 @@ If you are using Tortoise:
 * New... > Externals
 * New...
 * Local path: extra/ted
-* URL: https://github.com/UT-Austin-FIS/ted_wrapper/tags/v1.0/ted
+* URL: https://github.com/UT-Austin-FIS/ted_wrapper/tags/v1.1/ted
 * OK
 
 * Exit out of Tortoise, and you're done.
@@ -60,3 +60,8 @@ directory_info = ted_lookup.by_eid(
     ted_host=settings.TED_HOSTNAME,
     )
 ```
+
+Release Notes
+=============
+
+v1.1 - added a new method to a returned person object - is_restricted().
