@@ -115,7 +115,7 @@ class TEDLDAPItem(LDAPItem):
         """
         restrictions = [
             self.get('utexasEduPersonAttrRestrict', None),
-            self.get('utexasEduPersonRecordRestrict', None)
+            self.get('utexasEduPersonRecordRestrict', None),
             ]
         return restrictions != [None,None]
 
