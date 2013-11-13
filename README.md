@@ -75,6 +75,9 @@ After installing python-ldap, you can pip install this project via
 If you want to be able to run the tests, use
     pip install -e <path-to-ted-wrapper>[tests]
 
+You can run the tests with 
+    nosetests ted
+
 Release Notes
 =============
 v1.2 - Added django subpackage with ted_lookup module that uses Django settings.
