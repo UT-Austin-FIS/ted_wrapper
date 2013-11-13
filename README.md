@@ -61,7 +61,21 @@ directory_info = ted_lookup.by_eid(
     )
 ```
 
+Gotchas
+=======
+VirtualEnv on Windows
+---------------------
+This project depends on simpleldap, which itself depends on python-ldap. However, pip install simpleldap will likely fail in most Windows environments, even if it is set up with a compiler. 
+
+The solution is to download an appropriate .exe installer and use easy_install to 
+install it within the virtualenv, 
+[as documented on stackoverflow](http://stackoverflow.com/questions/15918188/how-to-install-python-ldap-on-a-python-2-7-virtualenv-on-windows-without-compili). 
+After installing python-ldap, you can pip install this project via
+    pip install -e <path-to-ted-wrapper>
+If you want to be able to run the tests, use
+    pip install -e <path-to-ted-wrapper>[tests]
+
 Release Notes
 =============
-
+v1.2 - Added django subpackage with ted_lookup module that uses Django settings.
 v1.1 - added a new method to a returned person object - is_restricted().
