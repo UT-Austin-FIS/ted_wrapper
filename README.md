@@ -73,7 +73,7 @@ install it within the virtualenv,
 After installing python-ldap, you can pip install this project via
     pip install -e <path-to-ted-wrapper>
 If you want to be able to run the tests, use
-    pip install -e <path-to-ted-wrapper>[tests]
+    pip install -e <path-to-ted-wrapper>[test-support]
 
 You can run the tests with 
     nosetests ted
