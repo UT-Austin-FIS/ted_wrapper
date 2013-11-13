@@ -61,6 +61,15 @@ directory_info = ted_lookup.by_eid(
     )
 ```
 
+Testing
+=======
+You can run the tests with 
+    nosetests ted
+
+If you pip install with the extra "test-support", the packages needed for running the 
+tests will also be installed (including nose), e.g.,
+    pip install -e <path-to-ted-wrapper>[test-support]
+
 Gotchas
 =======
 VirtualEnv on Windows
@@ -72,11 +81,6 @@ install it within the virtualenv,
 [as documented on stackoverflow](http://stackoverflow.com/questions/15918188/how-to-install-python-ldap-on-a-python-2-7-virtualenv-on-windows-without-compili). 
 After installing python-ldap, you can pip install this project via
     pip install -e <path-to-ted-wrapper>
-If you want to be able to run the tests, use
-    pip install -e <path-to-ted-wrapper>[test-support]
-
-You can run the tests with 
-    nosetests ted
 
 Release Notes
 =============
