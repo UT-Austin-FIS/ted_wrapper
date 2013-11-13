@@ -15,7 +15,7 @@ If you are using Tortoise:
 * New... > Externals
 * New...
 * Local path: extra/ted
-* URL: https://github.com/UT-Austin-FIS/ted_wrapper/tags/v1.1/ted
+* URL: https://github.com/UT-Austin-FIS/ted_wrapper/tags/v1.2/ted
 * OK
 
 * Exit out of Tortoise, and you're done.
