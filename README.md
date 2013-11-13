@@ -44,9 +44,9 @@ addl_attrs: There is a standard set of directory info that is brought back for a
             be brought back.  See http://www.utexas.edu/its/help/ted/1064 for the full set of 
             available attributes.
 
-    ted_eid: <kbd>&gt;</kbd>Your application's service EID which has been authorized to query TED.<kbd>&lt;</kbd>
-    ted_pass: <kbd>&gt;</kbd>The password associated with the ted_eid.<kbd>&lt;</kbd>
-    ted_host: <kbd>&gt;</kbd>The url of the TED service.<kbd>&lt;</kbd>
+    ted_eid: [Your application's service EID which has been authorized to query TED.]
+    ted_pass: [The password associated with the ted_eid.]
+    ted_host: [The url of the TED service.]
 
 Example lookup by EID:
 
@@ -71,9 +71,9 @@ In Django projects, it may be more convenient to add the following fields to Dja
 settings:
 
 ```python
-TED_EID: <the eid used to connect to the TED account>
-TED_PASSWORD: <the password used to connect>
-TED_HOSTNAME: <the TED hostname to use>
+TED_EID: [the eid used to connect to the TED account]
+TED_PASSWORD: [the password used to connect]
+TED_URL: [The url of the TED service.]
 ```
 
 and then import ted_lookup as follows:

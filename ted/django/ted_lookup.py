@@ -10,7 +10,7 @@ def by_eid(eid, addl_attrs=None):
         addl_attrs,
         ted_eid=settings.TED_EID,
         ted_pass=settings.TED_PASSWORD,
-        ted_host=settings.TED_HOSTNAME,
+        ted_host=settings.TED_URL,
     )
 
 def by_uin(uin, addl_attrs=None):
@@ -19,5 +19,5 @@ def by_uin(uin, addl_attrs=None):
         addl_attrs,
         ted_eid=settings.TED_EID,
         ted_pass=settings.TED_PASSWORD,
-        ted_host=settings.TED_HOSTNAME,
+        ted_host=settings.TED_URL,
     )
