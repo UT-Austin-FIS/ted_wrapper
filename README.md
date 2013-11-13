@@ -28,6 +28,9 @@ PyPE applications that currently use the ted lookups in versions of infrastructu
 prior to 1.8 will not need to change their code, but will need to add a new svn:externals 
 property in order to continue making those calls once they upgrade to 1.8. See Installation.
 
+FIS Infrastructure will remove ted support in the 1.9 branch. You can achieve a 
+similar effect by using ted.django support as described below.
+
 
 Use
 ===
@@ -40,9 +43,10 @@ addl_attrs: There is a standard set of directory info that is brought back for a
             as defined in ted.py. However, you can request that additional directory info 
             be brought back.  See http://www.utexas.edu/its/help/ted/1064 for the full set of 
             available attributes.
-ted_eid: Your application's service EID which has been authorized to query TED.
-ted_pass: The password associated with the ted_eid.
-ted_host: The url of the TED service.
+
+    ted_eid: <kbd>&gt;</kbd>Your application's service EID which has been authorized to query TED.<kbd>&lt;</kbd>
+    ted_pass: <kbd>&gt;</kbd>The password associated with the ted_eid.<kbd>&lt;</kbd>
+    ted_host: <kbd>&gt;</kbd>The url of the TED service.<kbd>&lt;</kbd>
 
 Example lookup by EID:
 
@@ -60,6 +64,41 @@ directory_info = ted_lookup.by_eid(
     ted_host=settings.TED_HOSTNAME,
     )
 ```
+
+Django
+------
+In Django projects, it may be more convenient to add the following fields to Django
+settings:
+
+```python
+TED_EID: <the eid used to connect to the TED account>
+TED_PASSWORD: <the password used to connect>
+TED_HOSTNAME: <the TED hostname to use>
+```
+
+and then import ted_lookup as follows:
+
+```python
+from ted.django import ted_lookup
+
+directory_info = ted_lookup.by_eid(
+    eid='foobar',
+    addl_attrs=[
+        'telephoneNumber',
+        'utexasEduPersonOfficeLocation',
+        ],
+    )
+
+directory_info = ted_lookup.by_uin(
+    eid='uin-value',
+    addl_attrs=[
+        'telephoneNumber',
+        'utexasEduPersonOfficeLocation',
+        ],
+    )
+```
+
+The Django TED_ settings will implicitly be used.
 
 Testing
 =======
@@ -87,5 +126,11 @@ After installing python-ldap, you can pip install this project via
 
 Release Notes
 =============
-v1.2 - Added django subpackage with ted_lookup module that uses Django settings.
-v1.1 - added a new method to a returned person object - is_restricted().
+v1.2
+----
+- Added django subpackage with ted_lookup module that uses Django settings. 
+- Added setup.py support.
+
+v1.1
+----
+- Added a new method to a returned person object - is_restricted().
