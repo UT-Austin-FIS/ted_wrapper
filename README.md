@@ -106,10 +106,10 @@ You can run the tests with
 
     nosetests ted
 
-If you pip install with the extra "test-support", the packages needed for running the 
+If you pip install with the extra "test_support", the packages needed for running the 
 tests will also be installed (including nose), e.g.,
 
-    pip install -e <path-to-ted-wrapper>[test-support]
+    pip install -e <path-to-ted-wrapper>[test_support]
 
 Gotchas
 =======

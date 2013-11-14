@@ -11,7 +11,7 @@ except ImportError:
     TEST_DEPS.append('unittest2>=0.5.1')
 
 setup(
-    name = "TED Wrapper",
+    name = "TED_Wrapper",
     version = "1.2.0",
     author = "FIS Infrastructure Team",
     author_email = "oa.it-infrastructure@austin.utexas.edu",
@@ -20,7 +20,7 @@ setup(
     packages = find_packages(),
     install_requires = ['simpleldap>=0.7.1'],
     extras_require = {
-        'test-support': TEST_DEPS,
+        'test_support': TEST_DEPS,
     },
     long_description = read("README.md"),
     classifiers=["Development Status :: 5 - Production/Stable"],
