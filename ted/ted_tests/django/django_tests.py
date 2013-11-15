@@ -10,7 +10,7 @@ def skip(msg):
 """
     {msg}
     Unable to run Django-related tests:
-        pip install <ted_wrapper_path>[tests]
+        pip install <ted_wrapper_path>[test_support]
     to install testing dependencies.
 """)
     print general_message.format(msg=msg)
