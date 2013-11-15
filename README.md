@@ -28,7 +28,7 @@ PyPE applications that currently use the ted lookups in versions of infrastructu
 prior to 1.8 will not need to change their code, but will need to add a new svn:externals 
 property in order to continue making those calls once they upgrade to 1.8. See Installation.
 
-FIS Infrastructure will remove ted support in the 1.9 branch. You can achieve a 
+FIS Infrastructure will remove acct_lib.ted in the 1.9 branch. You can achieve a 
 similar effect by using ted.django support as described below.
 
 
