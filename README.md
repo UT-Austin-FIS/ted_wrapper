@@ -46,7 +46,7 @@ addl_attrs: There is a standard set of directory info that is brought back for a
 
     ted_eid: [Your application's service EID which has been authorized to query TED.]
     ted_pass: [The password associated with the ted_eid.]
-    ted_host: [The url of the TED service.]
+    ted_host: [The name of the TED server, e.g., 'myserver.bigu.edu'.]
 
 Example lookup by EID:
 
@@ -73,7 +73,7 @@ settings:
 ```python
 TED_EID: [the eid used to connect to the TED account]
 TED_PASSWORD: [the password used to connect]
-TED_URL: [The url of the TED service.]
+TED_HOSTNAME: [The name of the TED server, e.g., 'myserver.bigu.edu'.]
 ```
 
 and then import ted_lookup as follows:

@@ -58,7 +58,7 @@ if not SKIP_TESTS:
                                                 self.addl_attrs,
                                                 ted_eid=settings.TED_EID,
                                                 ted_pass=settings.TED_PASSWORD,
-                                                ted_host=settings.TED_URL)
+                                                ted_host=settings.TED_HOSTNAME)
 
         @patch('ted.ted_lookup.by_uin')
         def test_by_uin_passes_ted_settings_correctly(self, mock_lookup):
@@ -67,4 +67,4 @@ if not SKIP_TESTS:
                                                 self.addl_attrs,
                                                 ted_eid=settings.TED_EID,
                                                 ted_pass=settings.TED_PASSWORD,
-                                                ted_host=settings.TED_URL)
+                                                ted_host=settings.TED_HOSTNAME)
