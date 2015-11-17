@@ -126,6 +126,11 @@ After installing python-ldap, you can pip install this project via
 
 Release Notes
 =============
+v1.2.1
+------
+- Add `__version__` to `__init__.py`
+- Make urlpatterns a list for the tests, and bump required Django version for tests to 1.8
+
 v1.2
 ----
 - Added django subpackage with ted_lookup module that uses Django settings. 

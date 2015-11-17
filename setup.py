@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-TEST_DEPS = ["django>=1.4", "mock>=1.0.1", "nose>=1.3.0"]
+TEST_DEPS = ["django>=1.8", "mock>=1.0.1", "nose>=1.3.0"]
 try:
     from unittest import skipIf
 except ImportError:
@@ -12,7 +12,7 @@ except ImportError:
 
 setup(
     name = "TED_Wrapper",
-    version = "1.2.0",
+    version = "1.2.1",
     author = "FIS Infrastructure Team",
     author_email = "oa.it-infrastructure@austin.utexas.edu",
     description = ("Convenience wrapper for TED."),
